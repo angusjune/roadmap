@@ -287,9 +287,8 @@ transform-style: preserve-3d; */
 }
 
 .priority {
-	font-family: "HelveticaNeue Ultra Light";
-	font-weight: normal;
 	font-size: 1.6em;
+	font-weight: normal;
 	line-height: 1em;
 	color: #0cc137;
 	position: absolute;
@@ -418,6 +417,15 @@ transform-style: preserve-3d; */
 	height: 3px;
 	background-color: #d3d3d3;
 	border-radius: 50%;
+}
+
+.content-inner .checked:before {
+	background: url(../images/get.svg) no-repeat top left;
+	background-size: 10px 7px;
+	width: 10px;
+	height: 7px;
+	top: 5px;
+	left: -13px;
 }
 
 
