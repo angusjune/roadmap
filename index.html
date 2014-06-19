@@ -15,12 +15,10 @@
 		<!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
 	</head>
 	<body>
-		<!-- <div class="container"> -->
 
-			<!-- Codrops top bar -->
 			<div class="nav-top fixed">
 				<h1><a href="">Roadmap</a></h1>
-			</div><!--/ Codrops top bar -->
+			</div>
 
       <div id="skollr-body">
 
@@ -49,7 +47,6 @@
 					<li class="event">
 						<input type="radio" name="tl-group" checked/>
 						<label></label>
-						<!-- <div class="thumb user-4"><span>19 Nov</span></div> -->
 						<div class="content-perspective">
 							<div class="content">
 								<div class="content-inner">
@@ -69,13 +66,11 @@
 					<li class="event event--left">
 						<input type="radio" name="tl-group"/>
 						<label></label>
-						<!-- <div class="thumb user-6"><span>18 Nov</span></div> -->
 						<div class="content-perspective">
 							<div class="content">
 								<div class="content-inner">
 									<h3>入户测试调研</h3>
 									<h4 class="priority">0</h4>
-									<!-- <p>Ha, didn't even stay for the wedding. Just took his million spacebucks and ran. And you will not call me 'you'. You will never address me as 'you'. You will call me 'your royal highness'. I really must go back. I shouldn't have run away. I realize now that love is one luxury a princess cannot afford. </p> -->
 								</div>
 							</div>
 						</div>
@@ -84,7 +79,6 @@
 					<li class="event">
 						<input type="radio" name="tl-group" checked/>
 						<label></label>
-						<!-- <div class="thumb user-4"><span>19 Nov</span></div> -->
 						<div class="content-perspective">
 							<div class="content">
 								<div class="content-inner">
@@ -103,12 +97,9 @@
 					<li class="event event--left event--milestone">
 						<input type="radio" name="tl-group"/>
 						<label></label>
-						<!-- <div class="thumb user-6"><span>18 Nov</span></div> -->
 						<div class="content-perspective">
 								<div class="content-inner">
 									<h3>测试机回收并访问<br>第一阶段测试调研完成</h3>
-									<!-- <h4 class="priority"></h4> -->
-									<!-- <p>Ha, didn't even stay for the wedding. Just took his million spacebucks and ran. And you will not call me 'you'. You will never address me as 'you'. You will call me 'your royal highness'. I really must go back. I shouldn't have run away. I realize now that love is one luxury a princess cannot afford. </p> -->
 								</div>
 						</div>
 					</li>
@@ -116,7 +107,6 @@
 				</ul>
 			</section>
 
-		<!-- </div> --><!-- /container -->
 
 	</div><!-- /#skollr-body -->
 
@@ -128,23 +118,35 @@
 
 	<script>
 	  var $label   = $('.event label'),
-			  $content = $('.content-inner');
+			  $content = $('.content-inner'),
+				$month   = $('.event--month');
 
 	  $label.each(function(index){
 			//$(this).attr('data-start', 'transform:scale(0)').attr('data-35p-top', 'transform:scale(1)');
 			var t = $(this);
 
-			t.attr('data-scroll-reveal', 'wait 0.2s, then enter from the bottom over 0.2s');
+			t.attr('data-scroll-reveal', 'wait 0.2s, then enter from the bottom over 0.2s').attr('data-depth', '1.00');
 
 		});
 
 		$content.each(function(inedex){
       //$(this).attr('data-start', 'transform:scale(0.6)').attr('data-35p-top', 'transform:scale(1)');
 			var t = $(this);
-			t.attr('data-scroll-reveal', 'wait 0.3s, then enter from the bottom over 0.3s')
+			t.attr('data-scroll-reveal', 'wait 0.3s, then enter from the bottom over 0.3s').attr('data-depth', '1.00');
+		});
+
+		$month.each(function(){
+			var t = $(this);
+			t.attr('data-depth', '0.50');
 		});
 
 		window.scrollReveal = new scrollReveal();
+
+
+
+		var scene = document.getElementsByClassName('timeline')[0];
+
+		var parallax = new Parallax(scene);
 
 	    /*var s = skrollr.init({
 				render: function(data) {
