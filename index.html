@@ -47,7 +47,6 @@
 						<input type="checkbox" name="tl-group" checked/>
 						<label></label>
 						<div class="content-perspective">
-						<!-- 	<div class="content"> -->
 								<div class="content-inner">
 									<h3>基础体验优化</h3>
 									<h4 class="priority">0</h4>
@@ -58,7 +57,6 @@
 										<li>解决测试用户反馈的bug问题</li>
 									</ul>
 								</div>
-							<!-- </div> -->
 						</div>
 					</li>
 
@@ -66,12 +64,10 @@
 						<input type="checkbox" name="tl-group"/>
 						<label></label>
 						<div class="content-perspective">
-							<!-- <div class="content"> -->
 								<div class="content-inner">
 									<h3>入户测试调研</h3>
 									<h4 class="priority">0</h4>
 								</div>
-							<!-- </div> -->
 						</div>
 					</li>
 
@@ -79,7 +75,6 @@
 						<input type="checkbox" name="tl-group" checked/>
 						<label></label>
 						<div class="content-perspective">
-							<!-- <div class="content"> -->
 								<div class="content-inner">
 									<h3>新增功能设计</h3>
 									<h4 class="priority">0</h4>
@@ -89,7 +84,6 @@
 										<li>碰撞加好友视觉设计</li>
 									</ul>
 								</div>
-							<!-- </div> -->
 						</div>
 					</li>
 
@@ -106,52 +100,42 @@
 				</ul>
 			</section>
 
+			<div class="wanker" data-wanker>
+			  <div class="wanker-content">
+			    <h1>Enough! I am indeed responsive.</h1>
+			  </div>
+			</div>
+
 
 	</div><!-- /#skollr-body -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/scrollReveal.min.js"></script>
-	<script src="js/skrollr.min.js"></script>
 	<script src="js/jquery.wanker.min.js" defer="defer"></script>
 
 	<script>
+	  document.addEventListener("touchstart", function(){}, true);
+
 	  var $label   = $('.event label'),
 			  $content = $('.content-inner'),
-				$month   = $('.event--month');
-
-		document.addEventListener("touchstart", function(){}, true);
+				$month   = $('.event--month'),
+				$wanker  = $('[data-wanker]');
 
 	  $label.each(function(index){
-			//$(this).attr('data-start', 'transform:scale(0)').attr('data-35p-top', 'transform:scale(1)');
 			var t = $(this);
-
 			t.attr('data-scroll-reveal', 'wait 0.2s, then enter from the bottom over 0.2s').attr('data-depth', '1.00');
-
 		});
 
 		$content.each(function(inedex){
-      //$(this).attr('data-start', 'transform:scale(0.6)').attr('data-35p-top', 'transform:scale(1)');
 			var t = $(this);
 			t.attr('data-scroll-reveal', 'wait 0.3s, then enter from the bottom over 0.3s').attr('data-depth', '1.00');
 		});
 
-		$month.each(function(){
-			var t = $(this);
-			t.attr('data-depth', '0.50');
-		});
-
 		window.scrollReveal = new scrollReveal();
 
-	    /*var s = skrollr.init({
-				render: function(data) {
-    scroll = data.curTop;
-
-    if ((scroll >= 200) && (!element.hasClass('active'))) {
-      element.addClass('active').removeAttr('data-start data-end');
-      skroller.refresh();
-    }
-  }
-});*/
+		$(function() {
+		  $wanker.wanker();
+		});
 
 	</script>
 

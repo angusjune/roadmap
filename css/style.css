@@ -13,7 +13,7 @@ body {
 
 .nav-top {
 	text-transform: uppercase;
-	z-index: 9999;
+	z-index: 999;
 	position: relative;
 	background-color: #242424;
   width: 100%;
@@ -41,6 +41,28 @@ body {
 	font-weight: bold;
 	text-align: center;
 	padding: 5px 0;
+}
+
+.wanker {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1007;
+}
+
+.wanker-content h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue Light", sans-serif;
+	color: #0cc137;
+  font-size: 3em;
+	font-weight: normal;
+  line-height: .9em;
+  margin-top: 3em;
+	text-align: center;
 }
 
 .container > header,
@@ -86,10 +108,6 @@ body {
 .event {
 	position: relative;
 	margin-bottom: 3em;
-}
-
-.event--left {
-
 }
 
 .event--month, .event--year {
@@ -184,6 +202,7 @@ body {
 	padding: 0 0 0.4em;
 	color: #242424;
 	font-weight: normal;
+	max-width: 9em;
 }
 
 .priority {
@@ -200,15 +219,6 @@ body {
 	content: 'P';
 	position: absolute;
 	left: -0.8em;
-}
-
-.content-inner p {
-	font-size: 18px;
-	max-height: 0px;
-	overflow: hidden;
-	color: transparent;
-	color: rgba(0,0,0,0);
-	text-align: left;
 }
 
 .content-inner:before {
@@ -317,12 +327,6 @@ body {
 
 /* Checked */
 
-.event input[type="checkbox"]:checked + label:after {
-	/* content: '\2714'; */
-	/* color: #F26328; */
-	/* box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8); */
-}
-
 .event input[type="checkbox"]:checked ~ .content-perspective:before {
 	background: #F26328;
 }
@@ -377,9 +381,6 @@ body {
 		text-align: justify;
 	}
 
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p {
-		max-height: 500px;
-	}
 }
 
 @media screen and (max-width: 640px) {
@@ -465,7 +466,7 @@ body {
 
 	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p,
 	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul {
-		max-height: 300px;
+		max-height: 35em;
 	}
 
 	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p:before,
