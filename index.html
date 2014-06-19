@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 		<title>Roadmap: WeChat Kids</title>
 		<meta name="description" content="An overview of the progress of WeChat Kids" />
 		<meta name="keywords" content="" />
@@ -16,12 +16,11 @@
 	</head>
 	<body>
 
-			<div class="nav-top fixed">
-				<h1><a href="">Roadmap</a></h1>
-			</div>
-
       <div id="skollr-body">
 
+				<div class="nav-top fixed">
+					<h1><a href="">Roadmap</a></h1>
+				</div>
 
 			<header class="header clearfix">
 
@@ -48,7 +47,7 @@
 						<input type="radio" name="tl-group" checked/>
 						<label></label>
 						<div class="content-perspective">
-							<div class="content">
+						<!-- 	<div class="content"> -->
 								<div class="content-inner">
 									<h3>基础体验优化</h3>
 									<h4 class="priority">0</h4>
@@ -59,7 +58,7 @@
 										<li>解决测试用户反馈的bug问题</li>
 									</ul>
 								</div>
-							</div>
+							<!-- </div> -->
 						</div>
 					</li>
 
@@ -67,12 +66,12 @@
 						<input type="radio" name="tl-group"/>
 						<label></label>
 						<div class="content-perspective">
-							<div class="content">
+							<!-- <div class="content"> -->
 								<div class="content-inner">
 									<h3>入户测试调研</h3>
 									<h4 class="priority">0</h4>
 								</div>
-							</div>
+							<!-- </div> -->
 						</div>
 					</li>
 
@@ -80,7 +79,7 @@
 						<input type="radio" name="tl-group" checked/>
 						<label></label>
 						<div class="content-perspective">
-							<div class="content">
+							<!-- <div class="content"> -->
 								<div class="content-inner">
 									<h3>新增功能设计</h3>
 									<h4 class="priority">0</h4>
@@ -90,7 +89,7 @@
 										<li>碰撞加好友视觉设计</li>
 									</ul>
 								</div>
-							</div>
+							<!-- </div> -->
 						</div>
 					</li>
 
@@ -113,13 +112,14 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/scrollReveal.min.js"></script>
 	<script src="js/skrollr.min.js"></script>
-	<script src="js/parallax.min.js"></script>
 	<script src="js/jquery.wanker.min.js" defer="defer"></script>
 
 	<script>
 	  var $label   = $('.event label'),
 			  $content = $('.content-inner'),
 				$month   = $('.event--month');
+
+		document.addEventListener("touchstart", function(){}, true);
 
 	  $label.each(function(index){
 			//$(this).attr('data-start', 'transform:scale(0)').attr('data-35p-top', 'transform:scale(1)');
@@ -142,12 +142,6 @@
 
 		window.scrollReveal = new scrollReveal();
 
-
-
-		var scene = document.getElementsByClassName('timeline')[0];
-
-		var parallax = new Parallax(scene);
-
 	    /*var s = skrollr.init({
 				render: function(data) {
     scroll = data.curTop;
@@ -159,33 +153,8 @@
   }
 });*/
 
-
-
 	</script>
 
-		<!-- <script>
-			var controller;
-			\$(document).ready(function(\$) {
-				// init controller
-				controller = new ScrollMagic();
-
-				// build tween
-				var tween = TweenMax.fromTo("label", 0.5,
-						{scale: 0.1},
-						{scale: 1}
-					);
-
-				// build scene
-				var scene = new ScrollScene({triggerElement: "#trigger1"})
-								.setTween(tween)
-								.addTo(controller);
-
-				// show indicators (requires debug extension)
-				scene.addIndicators();
-
-
-			});
-		</script> -->
 
 	</body>
 </html>
