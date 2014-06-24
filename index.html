@@ -16,8 +16,6 @@
 	</head>
 	<body>
 
-      <div id="skollr-body">
-
 				<div class="nav-top fixed">
 					<h1><a href="">Roadmap</a></h1>
 				</div>
@@ -43,9 +41,10 @@
 						<div class="month">6</div>
 					</li>
 
+				<!-- Events with a list -->
 					<li class="event">
-						<input type="checkbox" name="tl-group"/>
 						<label></label>
+						<input type="checkbox" name="tl-group"/>
 						<div class="content-perspective">
 								<div class="content-inner">
 									<h3>基础体验优化</h3>
@@ -60,8 +59,8 @@
 						</div>
 					</li>
 
+				<!-- Events with just a title -->
 					<li class="event event--left">
-						<input type="checkbox" name="tl-group"/>
 						<label></label>
 						<div class="content-perspective">
 								<div class="content-inner">
@@ -71,9 +70,10 @@
 						</div>
 					</li>
 
+				<!-- Events with a list and a checked item -->
 					<li class="event">
-						<input type="checkbox" name="tl-group"/>
 						<label></label>
+						<input type="checkbox" name="tl-group"/>
 						<div class="content-perspective">
 								<div class="content-inner">
 									<h3>新增功能设计</h3>
@@ -87,6 +87,7 @@
 						</div>
 					</li>
 
+				<!-- Milestone events -->
 					<li class="event event--left event--milestone">
 						<label></label>
 						<div class="content-perspective">
@@ -99,14 +100,12 @@
 				</ul>
 			</section>
 
+		<!-- Just for fun! -->
 			<div class="wanker" data-wanker>
 			  <div class="wanker-content">
 			    <h1>Enough! I am indeed responsive.</h1>
 			  </div>
 			</div>
-
-
-	</div><!-- /#skollr-body -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/scrollReveal.min.js"></script>
@@ -131,6 +130,11 @@
 		});
 
 		window.scrollReveal = new scrollReveal();
+
+    //fix android default browser doesn't support customizing checkbox
+		$('.event').on('click', function(){
+			$(this).find('[type=checkbox]').toggleClass('checkbox checked');
+		});
 
 		$(function() {
 		  $wanker.wanker();
