@@ -1,497 +1,409 @@
 @import url('reset.css');
-
 body {
-	font-family: HelveticaNeue, 'Hiragino sans', sans-serif;
-	font-weight: 100;
-	background-color: #eee;
-	font-size: 16px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	-webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove black mask on tabbing links */
+  font-family: HelveticaNeue, 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  background-color: #eee;
+  font-size: 16px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Remove black mask on tapping links */
   -webkit-overflow-scrolling: touch;
 }
-
 .nav-top {
-	text-transform: uppercase;
-	z-index: 999;
-	position: relative;
-	background-color: #242424;
+  text-transform: uppercase;
+  z-index: 999;
+  position: relative;
+  background-color: #242424;
   width: 100%;
   height: 3em;
 }
-
 .nav-top h1 {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue Light", sans-serif;
-	color: #eeeeee;
-	font-size: 1.2em;
-	font-weight: normal;
-	line-height: 2.5em;
-	padding-left: 1em;
-
-}
-
-.support-note {
-	clear: both;
-}
-
-.support-note span{
-	color: #ac375d;
-	font-size: 16px;
-	display: none;
-	font-weight: bold;
-	text-align: center;
-	padding: 5px 0;
-}
-
-.wanker {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
-  display: none;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1007;
-}
-
-.wanker-content h1 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue Light", sans-serif;
-	color: #0cc137;
-  font-size: 3em;
-	font-weight: normal;
-  line-height: .9em;
-  margin-top: 3em;
-	text-align: center;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 2.5em;
+  padding-left: 1em;
 }
-
-.container > header,
-.main {
-	width: 100%;
-	max-width: 1060px;
-	margin: 0 auto;
-	padding: 0 30px;
-	overflow-x: hidden;
+.nav-top h1 a {
+  color: #eee;
 }
-
+.fixed {
+  position: fixed;
+  background-color: rgba(36, 36, 36, 0.6);
+}
+.fixed h1, .nav-top h1 a {
+  color: #ddd;
+}
+.fixed ~ .header h2 {
+  margin-top: 1.5em;
+}
+.support-note {
+  clear: both;
+  text-align: center;
+}
+.support-note span {
+  color: #ac375d;
+  font-size: 16px;
+  display: none;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.container > header, .main {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow-x: hidden;
+}
 .container > header {
-	padding: 30px 30px 0px 30px;
+  padding: 30px 30px 0px 30px;
 }
-
 .header h2 {
-	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "HelveticaNeue Ultra Light", sans-serif;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "HelveticaNeue Ultra Light", sans-serif;
   color: #0cc137;
   font-size: 4.5em;
   font-weight: normal;
   text-align: center;
-	margin: 1em auto;
+  margin: 1em auto;
 }
-
 .timeline {
-	position: relative;
-	list-style-type: none;
-	padding: 0 0 50px 0;
+  position: relative;
+  list-style-type: none;
+  padding: 0 0 50px 0;
 }
-
 .timeline:before {
-	content: '';
-	position: absolute;
-	width: 2px;
-	height: 100%;
-	top: 0;
-	left: 50%;
-	margin-left: -1px;
-	background-color: #e3e3e3;
-	z-index: -1;
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  background-color: #e3e3e3;
+  z-index: -1;
 }
-
 .event {
-	position: relative;
-	margin-bottom: 3em;
+  position: relative;
+  margin-bottom: 3em;
 }
-
 .event--month, .event--year {
-	text-align: center;
+  text-align: center;
 }
-
 .event--year {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
-
 .year {
-	color: white;
-	font-size: 1em;
-	padding: 0.2em 0.6em;
-	border-radius: 3px;
-	background-color: #d3d3d3;
-	display: inline-block;
+  color: white;
+  font-size: 1em;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  background-color: #d3d3d3;
+  display: inline-block;
 }
-
 .month {
   color: #fff;
-	font-size: 1.5em;
-	width: 2em;
-	height: 2em;
-	border-radius: 50%;
-	background-color: #0cc137;
-	line-height: 2em;
-	text-align: center;
-	display: inline-block;
+  font-size: 1.5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #0cc137;
+  line-height: 2em;
+  text-align: center;
+  display: inline-block;
 }
-
 .month, .year {
-	margin-left: 2px;
+  margin-left: 2px;
 }
-
 /* Transparent Checkbox/radio hack: leave the checkbox on top, hide it with opacity 0 */
 
-.event label,
+.event label, .event input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  margin-left: -6px;
+  top: 15px;
+  position: absolute;
+  display: block;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+}
 .event input[type="checkbox"] {
-	width: 12px;
-	height: 12px;
-	left: 50%;
-	margin-left: -6px;
-	top: 15px;
-	position: absolute;
-	display: block;
-	background-color: #d3d3d3;
-	border-radius: 50%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
 }
-
-.event input[type="checkbox"] {
-	opacity: 0;
-	z-index: 10;
-	cursor: pointer;
-	display: none;
+.event input[type="checkbox"] + .content-perspective .content-inner {
+  /* fix android browser "bug" with this empty rule */
 }
-
-.event input[type="checkbox"] + .content-perspective .content-inner  {
-	/* fix android browser "bug" */
-}
-
 .event label:after {
-	background: #d3d3d3;
-	border-radius: 50%;
-	color: #41838E;
-	height: 100%;
-	width: 100%;
-	left: -2px;
-	top: -3px;
-	line-height: 12px;
-	position: absolute;
-	text-align: center;
+  background: #d3d3d3;
+  border-radius: 50%;
+  color: #41838E;
+  height: 100%;
+  width: 100%;
+  left: -2px;
+  top: -3px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
 }
-
 .content-perspective {
-	margin-left: 2em;
-	position: relative;
-	left: 50%;
+  margin-left: 2em;
+  position: relative;
+  left: 50%;
 }
-
 .event--left .content-perspective {
-	margin-left: -22em;
+  margin-left: -22em;
 }
-
 .content-inner {
-	position: relative;
-	padding: 1.2em;
-	color: #d3d3d3;
-	border: none;
-	background: #fff;
-	max-width: 20em;
+  position: relative;
+  padding: 1.2em;
+  color: #d3d3d3;
+  border: none;
+  background: #fff;
+  max-width: 20em;
 }
-
 .content-inner h3 {
-	font-size: 1.6em;
-	padding: 0 0 0.4em;
-	color: #242424;
-	font-weight: normal;
-	max-width: 9em;
+  font-size: 1.6em;
+  padding: 0 0 0.4em;
+  color: #242424;
+  font-weight: normal;
+  max-width: 9em;
 }
-
 .priority {
-	font-size: 1.6em;
-	font-weight: normal;
-	line-height: 1em;
-	color: #0cc137;
-	position: absolute;
-	right: 1em;
-	top: 0.8em;
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1em;
+  color: #0cc137;
+  position: absolute;
+  right: 1em;
+  top: 0.8em;
 }
-
 .priority:before {
-	content: 'P';
-	position: absolute;
-	left: -0.8em;
+  content: 'P';
+  position: absolute;
+  left: -0.8em;
 }
-
 .content-inner:before {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-top: 12px solid transparent;
-	border-right: 20px solid white;
-	border-bottom: 12px solid transparent;
-	left: -12px;
-	top: 8px;
-	z-index: -1;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-right: 20px solid white;
+  border-bottom: 12px solid transparent;
+  left: -12px;
+  top: 8px;
+  z-index: -1;
 }
-
 .event--left .content-inner:before {
-	border-right: 0;
-	border-top: 12px solid transparent;
-	border-left: 20px solid white;
-	border-bottom: 12px solid transparent;
-	right: -12px;
-	left: auto;
+  border-right: 0;
+  border-top: 12px solid transparent;
+  border-left: 20px solid white;
+  border-bottom: 12px solid transparent;
+  right: -12px;
+  left: auto;
 }
-
 .event--milestone .content-inner:after {
-	content: '';
-	z-index: 1;
-	position: absolute;
-	right: 1em;
-	top: 1.4em;
-	background: url(../images/flag.svg) no-repeat top left;
-	background-size: 19px 21px;
-	width: 19px;
-	height: 21px;
+  content: '';
+  z-index: 1;
+  position: absolute;
+  right: 1em;
+  top: 1.4em;
+  background: url(../images/flag.svg) no-repeat top left;
+  background-size: 19px 21px;
+  width: 19px;
+  height: 21px;
 }
-
 .event--milestone h3 {
-	color: #0cc137;
+  color: #0cc137;
 }
-
 /* Transitions */
 
 .content-inner h3 {
-	-webkit-transition: all 0.6s ease-in-out 0.2s;
-	-moz-transition: all 0.6s ease-in-out 0.2s;
-	-o-transition: all 0.6s ease-in-out 0.2s;
-	-ms-transition: all 0.6s ease-in-out 0.2s;
-	transition: all 0.6s ease-in-out 0.2s;
+  -webkit-transition: all 0.6s ease-in-out 0.2s;
+  -moz-transition: all 0.6s ease-in-out 0.2s;
+  -o-transition: all 0.6s ease-in-out 0.2s;
+  -ms-transition: all 0.6s ease-in-out 0.2s;
+  transition: all 0.6s ease-in-out 0.2s;
 }
-
 .content-inner {
-	-webkit-transition: box-shadow 0.8s linear 0.2s;
-	-moz-transition: box-shadow 0.8s linear 0.2s;
-	-o-transition: box-shadow 0.8s linear  0.2s;
-	-ms-transition: box-shadow 0.8s linear 0.2s;
-	transition: box-shadow 0.8s linear 0.2s;
-	border-radius: 4px;
+  -webkit-transition: box-shadow 0.8s linear 0.2s;
+  -moz-transition: box-shadow 0.8s linear 0.2s;
+  -o-transition: box-shadow 0.8s linear 0.2s;
+  -ms-transition: box-shadow 0.8s linear 0.2s;
+  transition: box-shadow 0.8s linear 0.2s;
+  border-radius: 4px;
 }
-
 .content-inner p, .content-inner ul {
-	-webkit-transition: max-height 0.5s linear, color 0.3s linear;
-	-moz-transition: max-height 0.5s linear, color 0.3s linear;
-	-o-transition: max-height 0.5s linear, color 0.3s linear;
-	-ms-transition: max-height 0.5s linear, color 0.3s linear;
-	transition: max-height 0.5s linear, color 0.3s linear;
+  -webkit-transition: max-height 0.5s linear, color 0.3s linear;
+  -moz-transition: max-height 0.5s linear, color 0.3s linear;
+  -o-transition: max-height 0.5s linear, color 0.3s linear;
+  -ms-transition: max-height 0.5s linear, color 0.3s linear;
+  transition: max-height 0.5s linear, color 0.3s linear;
 }
-
 .content-inner p:before, .content-inner ul:before {
-	-webkit-transition: opacity 0.3s linear;
-	-moz-transition: opacity 0.3s linear;
-	-o-transition: opacity 0.3s linear;
-	-ms-transition: opacity 0.3s linear;
-	transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
-
-.content-inner ul  {
-	padding-left: 1.2em;
-	list-style: none inside none;
+.content-inner ul {
+  padding-left: 1.2em;
+  list-style: none inside none;
 }
-
 .content-inner li {
-	margin-bottom: 0.4em;
-	position: relative;
+  margin-bottom: 0.4em;
+  position: relative;
 }
-
 .content-inner li:before {
-	content: '';
-	position: absolute;
-	left: -10px;
-	top: 0.4em;
-	width: 3px;
-	height: 3px;
-	background-color: #d3d3d3;
-	border-radius: 50%;
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0.4em;
+  width: 3px;
+  height: 3px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
 }
-
 .content-inner .checked:before {
-	background: url(../images/get.svg) no-repeat top left;
-	background-size: 10px 7px;
-	width: 10px;
-	height: 7px;
-	top: 5px;
-	left: -13px;
+  background: url(../images/get.svg) no-repeat top left;
+  background-size: 10px 7px;
+  width: 10px;
+  height: 7px;
+  top: 5px;
+  left: -13px;
 }
-
-
 /* Checked */
 
-.event input[type="checkbox"]:checked ~ .content-perspective:before,
-.event .checkbox.checked ~ .content-perspective:before  {
-	background: #F26328;
+.event input[type="checkbox"]:checked ~ .content-perspective:before, .event .checkbox.checked ~ .content-perspective:before {
+  background: #F26328;
 }
-
-.event input[type="checkbox"]:checked ~ .content-perspective .content-inner h3,
-.event .checkbox.checked ~ .content-perspective .content-inner h3 {
-	color: #242424;
-	font-weight: normal;
+.event input[type="checkbox"]:checked ~ .content-perspective .content-inner h3, .event .checkbox.checked ~ .content-perspective .content-inner h3 {
+  color: #242424;
+  font-weight: normal;
 }
-
-.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p,
-.event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul,
-.event .checkbox.checked ~ .content-perspective .content-inner p,
-.event .checkbox.checked ~ .content-perspective .content-inner ul {
-	max-height: 260px; /* Add media queries */
-	color: rgba(0,0,0,0.4);
-	-webkit-transition-delay: 0s, 0.6s;
-	-moz-transition-delay: 0s, 0.6s;
-	-o-transition-delay: 0s, 0.6s;
-	-ms-transition-delay: 0s, 0.6s;
-	transition-delay: 0s, 0.6s;
+.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p, .event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul, .event .checkbox.checked ~ .content-perspective .content-inner p, .event .checkbox.checked ~ .content-perspective .content-inner ul {
+  max-height: 260px;
+  /* Add media queries */
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition-delay: 0s, 0.6s;
+  -moz-transition-delay: 0s, 0.6s;
+  -o-transition-delay: 0s, 0.6s;
+  -ms-transition-delay: 0s, 0.6s;
+  transition-delay: 0s, 0.6s;
 }
-
-.event input[type="checkbox"]:checked ~ .content-perspective .content-inner:before,
-.event .checkbox.checked ~ .content-perspective .content-inner:before {
-	color: #F26328;
+.event input[type="checkbox"]:checked ~ .content-perspective .content-inner:before, .event .checkbox.checked ~ .content-perspective .content-inner:before {
+  color: #F26328;
 }
-
 @media screen and (max-width: 850px) {
-	body {
-		font-size: 14px;
-	}
-
-	.content-inner p {
-		text-align: justify;
-	}
-
+  body {
+    font-size: 14px;
+  }
+  .content-inner p {
+    text-align: justify;
+  }
 }
-
 @media screen and (max-width: 640px) {
-	body {
-		font-size: 13px;
-	}
-
-	.content-inner {
-		max-width: 17em;
-	}
-
-	.event--left .content-perspective {
-		margin-left: -19em;
-	}
+  body {
+    font-size: 13px;
+  }
+  .content-inner {
+    max-width: 17em;
+  }
+  .event--left .content-perspective {
+    margin-left: -19em;
+  }
 }
-
 @media screen and (max-width: 540px) {
-
-	.header h2 {
-		font-size: 3em;
-	}
-
+  .header h2 {
+    font-size: 3em;
+  }
   .event .content-perspective, .event--left .content-perspective {
-		margin-left: -150px;
-	}
-
-	.content-perspective {
-		max-width: 300px;
-	}
-
-	.content-inner {
-		max-width: 300px;
-		-webkit-transition: background-color 0.2s linear;
-		transition: background-color 0.2s linear;
-	}
-
-	.content-inner h3 {
-		max-width: 12em;
-		cursor: default;
-	}
-
-	.content-inner p, .content-inner ul {
-		max-height: 0;
-		overflow: hidden;
-	}
-
-	.content-inner p:before, .content-inner ul:before {
-		content: "";
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		width: 0;
-	  height: 0;
-	  border-bottom: 10px solid #0cc137;
-	  border-left: 10px solid transparent;
-	}
-
-	.event input[type="checkbox"],
-	.event .checkbox {
-		display: block;
-		width: 100%;
-		height: 100%;
-		left: 0px;
-		top: 0px;
-		z-index: 999;
-		/* -webkit-tap-highlight-color: rgba(12, 193, 55, .1); */
-	}
-
-	.event input[type="checkbox"]:active ~ .content-perspective .content-inner,
-	.event .checkbox.active ~ .content-perspective .content-inner {
-		background-color: #E4FCDF;
-
-	}
-
-	.event input[type="checkbox"]:active ~ .content-perspective .content-inner:before,
-	.event .checkbox.active ~ .content-perspective .content-inner:before {
-		border-bottom-color: #E4FCDF;
-		-webkit-transition:  border-color, 0.2s linear;
-		transition:  border-color, 0.2s linear;
-
-	}
-
-	.event label {
-		top: -24px;
-	}
-
-	.content-perspective {
-		margin-left: 0px;
-	}
-
-	.content-perspective:before {
-		height: 0px;
-	}
-
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner,
-	.event .checkbox.checked ~ .content-perspective .content-inner {
-		box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
-	}
-
-	.content-inner:before, .event--left .content-inner:before {
-		border-right: 0;
-	  border-bottom: 20px solid white;
-	  border-left: 12px solid transparent;
-	  border-right: 12px solid transparent;
-		top: -20px;
-		left: 50%;
-		margin-left: -12px;
-		z-index: 1;
-		-webkit-transition: border-color 0.2s linear;
-		transition: border-color 0.2s linear;
-	}
-
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p,
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul,
-	.event .checkbox.checked ~ .content-perspective .content-inner p,
-	.event .checkbox.checked ~ .content-perspective .content-inner ul {
-		max-height: 35em;
-	}
-
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner p:before,
-	.event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul:before,
-	.event .checkbox.checked ~ .content-perspective .content-inner p:before,
-	.event .checkbox.checked ~ .content-perspective .content-inner ul:before {
-		opacity: 0;
-	}
+    margin-left: -150px;
+  }
+  .content-perspective {
+    max-width: 300px;
+  }
+  .content-inner {
+    max-width: 300px;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+  }
+  .content-inner h3 {
+    max-width: 12em;
+    cursor: default;
+  }
+  .content-inner p, .content-inner ul {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .content-inner p:before, .content-inner ul:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #0cc137;
+    border-left: 10px solid transparent;
+  }
+  .event input[type="checkbox"], .event .checkbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+  }
+  .event input[type="checkbox"]:active ~ .content-perspective .content-inner, .event .checkbox.active ~ .content-perspective .content-inner {
+    background-color: #E4FCDF;
+  }
+  .event input[type="checkbox"]:active ~ .content-perspective .content-inner:before, .event .checkbox.active ~ .content-perspective .content-inner:before {
+    border-bottom-color: #E4FCDF;
+    -webkit-transition: border-color, 0.2s linear;
+    -moz-transition: border-color, 0.2s linear;
+    -ms-transition: border-color, 0.2s linear;
+    -o-transition: border-color, 0.2s linear;
+    transition: border-color, 0.2s linear;
+  }
+  .event label {
+    top: -24px;
+  }
+  .content-perspective {
+    margin-left: 0px;
+  }
+  .content-perspective:before {
+    height: 0px;
+  }
+  .event input[type="checkbox"]:checked ~ .content-perspective .content-inner, .event .checkbox.checked ~ .content-perspective .content-inner {
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  .content-inner:before, .event--left .content-inner:before {
+    border-right: 0;
+    border-bottom: 20px solid white;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    top: -20px;
+    left: 50%;
+    margin-left: -12px;
+    z-index: 1;
+    -webkit-transition: border-color 0.2s linear;
+    -moz-transition: border-color 0.2s linear;
+    -ms-transition: border-color 0.2s linear;
+    -o-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+  }
+  .event input[type="checkbox"]:checked ~ .content-perspective .content-inner p, .event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul, .event .checkbox.checked ~ .content-perspective .content-inner p, .event .checkbox.checked ~ .content-perspective .content-inner ul {
+    max-height: 35em;
+  }
+  .event input[type="checkbox"]:checked ~ .content-perspective .content-inner p:before, .event input[type="checkbox"]:checked ~ .content-perspective .content-inner ul:before, .event .checkbox.checked ~ .content-perspective .content-inner p:before, .event .checkbox.checked ~ .content-perspective .content-inner ul:before {
+    opacity: 0;
+  }
 }
