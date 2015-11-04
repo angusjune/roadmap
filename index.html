@@ -1,27 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <title>A Simple Responsive Roadmap</title>
   <meta name="description" content="An overview of the progress of your project" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="Angus" />
-  <link rel="shortcut icon" href="favicon-32.png">
-  <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="css/main.css" />
   <script src="js/modernizr.custom.63321.js"></script>
-  <!--[if lte IE 7]><style>.support-note .note-ie{display:block;}</style><![endif]-->
 </head>
 
 <body>
 
   <!-- Remove class "fixed" if you don't want the nav fixed -->
   <div class="nav-top fixed">
-    <h1><a href="">Roadmap</a>
-    </h1>
+    <h1><a href="">Roadmap</a></h1>
   </div>
 
   <header class="header clearfix">
@@ -39,35 +33,37 @@
 
       <!-- Indicates a year -->
       <li class="event event--year">
-        <div class="year">2014</div>
+        <div class="year">2015</div>
       </li>
 
       <!-- Indicates a month -->
       <li class="event event--month">
-        <div class="month">6</div>
+        <div class="month">11</div>
       </li>
 
       <!-- Event with a list -->
       <li class="event">
-        <label></label>
-        <input type="checkbox" name="tl-group" />
-        <div class="content-perspective">
-          <div class="content-inner">
-            <h3>Prototype Design</h3>
-            <h4 class="priority">0</h4>
-            <ul>
-              <li>Arm mechanic circuit</li>
-              <li>Knee metal bone</li>
-              <li>Control system</li>
-              <li>Bug fix</li>
-            </ul>
+        <em class="dot"></em>
+        <label class="label">
+          <input type="checkbox">
+          <div class="content-perspective">
+            <div class="content-inner">
+              <h3>Prototype Design</h3>
+              <h4 class="priority">0</h4>
+              <ul>
+                <li>Arm mechanic circuit</li>
+                <li>Knee metal bone</li>
+                <li>Control system</li>
+                <li>Bug fix</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </label>
       </li>
 
       <!-- Event with just a title -->
       <li class="event event--left">
-        <label></label>
+        <em class="dot"></em>
         <div class="content-perspective">
           <div class="content-inner">
             <h3>Alpha Test</h3>
@@ -78,28 +74,69 @@
 
       <!-- Event with a list and checked items -->
       <li class="event">
-        <label></label>
-        <input type="checkbox" name="tl-group" />
-        <div class="content-perspective">
-          <div class="content-inner">
-            <h3>Weapon System Design</h3>
-            <h4 class="priority">0</h4>
-            <ul>
-              <li class="checked">Gatling gun integration</li>
-              <li class="checked">Homing missiles</li>
-              <li>Death ray test</li>
-            </ul>
+        <label class="label">
+          <em class="dot"></em>
+          <input type="checkbox">
+          <div class="content-perspective">
+            <div class="content-inner">
+              <h3>Weapon System Design</h3>
+              <h4 class="priority">0</h4>
+              <ul>
+                <li class="checked">Gatling gun integration</li>
+                <li class="checked">Homing missiles</li>
+                <li>Death ray test</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </label>
       </li>
 
       <!-- Milestone event -->
       <li class="event event--left event--milestone">
-        <label></label>
+        <em class="dot"></em>
         <div class="content-perspective">
           <div class="content-inner">
             <h3>Put to test on field
               <br>Phrase 1 complete</h3>
+          </div>
+        </div>
+      </li>
+
+
+
+      <!-- Indicates a month -->
+      <li class="event event--month">
+        <div class="month">12</div>
+      </li>
+
+      <!-- Event with just a title -->
+      <li class="event event--left">
+        <em class="dot"></em>
+        <div class="content-perspective">
+          <div class="content-inner">
+            <h3>Beta Test</h3>
+            <h4 class="priority">1</h4>
+          </div>
+        </div>
+      </li>
+
+      <!-- Indicates a year -->
+      <li class="event event--year">
+        <div class="year">2016</div>
+      </li>
+
+      <!-- Indicates a month -->
+      <li class="event event--month">
+        <div class="month">1</div>
+      </li>
+
+      <!-- Milestone event -->
+      <li class="event event--milestone">
+        <em class="dot"></em>
+        <div class="content-perspective">
+          <div class="content-inner">
+            <h3>Put to test on field
+              <br>Phrase 2 complete</h3>
           </div>
         </div>
       </li>
@@ -109,33 +146,7 @@
 
   <script src="js/jquery.min.js"></script>
   <script src="js/scrollReveal.min.js"></script>
-
-  <script>
-  document.addEventListener("touchstart", function() {}, true);
-
-  var $label   = $('.event label'),
-      $event   = $('.event'),
-      $content = $('.content-inner'),
-      $month   = $('.event--month');
-
-
-  $label.each(function(index) {
-    var t = $(this);
-    t.attr('data-scroll-reveal', 'wait 0.2s, then enter from the bottom over 0.2s');
-  });
-
-  $content.each(function(inedex) {
-    var t = $(this);
-    t.attr('data-scroll-reveal', 'wait 0.3s, then enter from the bottom over 0.3s');
-  });
-
-  window.scrollReveal = new scrollReveal();
-
-  //fix android default browser doesn't support customizing checkbox
-  $event.on('click', function() {
-    $(this).find('[type=checkbox]').toggleClass('checkbox checked');
-  });
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 
