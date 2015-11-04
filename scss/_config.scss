@@ -1,0 +1,23 @@
+$base: 16px;
+$theme: #0cc137;
+$background: #eee;
+
+$nav-bg: transparentize(#242424, 0.4);
+
+$timeline-bg: #e3e3e3;
+
+$timeline-dot-bg: $timeline-bg;
+$timeline-dot-size: 12px;
+$timeline-dot-top: 15px;
+
+$year-bg: #d3d3d3;
+$year-color: #fff;
+
+$month-bg: $theme;
+$month-color: #fff;
+
+$event-title-color: #242424;
+$event-content-color: lighten($event-title-color, 45%);
+$event-content-color-checked: darken($event-content-color, 25%);
+$event-box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
+$event-bg: #fff;
